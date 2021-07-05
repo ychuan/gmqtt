@@ -11,9 +11,8 @@ type Message struct {
 	Topic    string
 	Payload  []byte
 	PacketID packets.PacketID
-	// v5
 	// The following fields are introduced in v5 specification.
-	// These fields will not take effect when it represents a v3 publish packet.
+	// Excepting MessageExpiry, these fields will not take effect when it represents a v3.x publish packet.
 	ContentType            string
 	CorrelationData        []byte
 	MessageExpiry          uint32
